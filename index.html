@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
             <a href="#" class="company-logo">
                 <img src="images\UHLogo_standard.png" alt="company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links active" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-links">Products</a></li>
                     <li><a href="#" class="hover-links">Customer</a></li>
@@ -35,6 +36,7 @@
                     <li><a href="#" class="hover-links primary-button">Sign Up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-links" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
 
@@ -141,14 +143,14 @@
     </section>
     
     <section class="big-features-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container" id="second-big-feature">
+            <div class="feature-img">
+                <img src="images\home_marketer.png" alt="">
+            </div>
             <div class="features-description">
                 <h4>Optimisation for</h4>
                 <h3>Marketers</h3>
                 <p>Fine-tune landing pages, messaging, and creative, helping you optimise conversion rates on marketing campaigns and product launches.</p>
-            </div>
-            <div class="feature-img">
-                <img src="images\home_marketer.png" alt="">
             </div>
         </div>
     </section>
@@ -255,5 +257,14 @@
     </div>
 
     <script src="https://kit.fontawesome.com/56e5f178c1.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton=document.getElementById("nav-toggle");
+        const navLinks=document.getElementById("nav-links");
+
+        toggleButton.addEventListener('click',() => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
